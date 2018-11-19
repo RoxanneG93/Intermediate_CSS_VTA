@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>Intermediate CSS</title>
+
+  <link rel="stylesheet" href="css/reveal.css" />
+  <!-- need to change the theme -->
+  <link rel="stylesheet" href="css/theme/valleytech.css" />
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css" />
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = window.location.search.match(/print-pdf/gi)
+      ? "css/print/pdf.css"
+      : "css/print/paper.css";
+    document.getElementsByTagName("head")[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- <section>
+        <p class="fragment grow">grow</p>
+        <p class="fragment shrink">shrink</p>
+        <p class="fragment fade-out">fade-out</p>
+        <p class="fragment fade-up">fade-up (also down, left and right!)</p>
+        <p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
+        <p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+        <p class="fragment highlight-current-blue">blue only once</p>
+        <p class="fragment highlight-red">highlight-red</p>
+        <p class="fragment highlight-green">highlight-green</p>
+        <p class="fragment highlight-blue">highlight-blue</p>
+      </section> -->
+      <section>
+        <h1>Intermediate <span class="fragment grow">CSS</span></h1>
+      </section>
+      <section>
+        <h2>Objectives</h2>
+        <!-- <hr> -->
+        <ul>
+          <li class="fragment fade-up">Manipulate common FONT and TEXT properties.</li>
+          <li class="fragment fade-up">Include external fonts using <a href="https://fonts.google.com/">Google Fonts</a></li>
+          <li class="fragment fade-up">Manipulate common font and text properties.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Lorem Ipsum Generator</h2>
+        <!-- <hr> -->
+        <p>Here's a link to some fun <a href="https://www.shopify.com/partners/blog/79940998-15-funny-lorem-ipsum-generators-to-shake-up-your-design-mockups ">Lorem
+            Ipsum Generators.</a></p>
+
+      </section>
+      <section>
+        <h2>Texts and Fonts</h2>
+        <!-- <hr> -->
+        <ul>
+          <li>Not all fonts are available within your machine's browser.</li>
+          <li>At <a href="https://www.cssfontstack.com/">Css Font Stack</a> we can check what basic fonts we can use.</li>
+        </ul>
+        <aside class="notes">
+          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the
+          speaker notes window (hit »S« on your keyboard).
+        </aside>
+      </section>
+      <section>
+        <h2>Commonly used Font Properties</h2>
+        <!-- <hr> -->
+        <ul>
+          <li>font-family</li>
+          <li>font-size</li>
+          <li>font-weight</li>
+          <li>line-height</li>
+          <li>text-align</li>
+          <li>text-decoration</li>
+        </ul>
+        <aside class="notes">
+          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the
+          speaker notes window (hit »S« on your keyboard).
+        </aside>
+      </section>
+      <section>
+        <h2>Pixels VS Ems</h2>
+        <!-- <hr> -->
+        <ul>
+          <li>When defining the <span>font-size</span> property, an <em>em</em> is equal to the size of the font
+            that applies to the paretn of the element in question.</li>
+          <li>Unless specified anywhere else on the page, the browser's font-size default is typically 16px.</li>
+          <li>By default: 1em = 16px, and 2em = 32px</li>
+        </ul>
+        <p>Check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">MDN's explanation font-size</a>
+          if further explanation
+          needed.</p>
+        <aside class="notes">
+          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the
+          speaker notes window (hit »S« on your keyboard).
+        </aside>
+      </section>
+      <section>
+        <a href="https://fonts.google.com/">
+          <h1>GOOGLE FONTS</h1>
+        </a>
+        <!-- <hr> -->
+      </section>
+      <section>
+        <h1>The Box Model</h1>
+        <p>Padding, Margin, Border, and More!</p>
+      </section>
+      <section>
+        <div class="twoCol">
+          <h2>Box Model</h2>
+          <p>"In a document, each element is represented as a rectangular box.
+            In CSS, each of these rectangular boxes is described using the standard box model.
+            Each box has four edges: the margin edge, border edge, padding edge, and content edge."</p>
+          <p> - MDN</p>
+          <img src="./images/CSS_Box_Model.png" alt="#">
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [
+        { src: "plugin/markdown/marked.js" },
+        { src: "plugin/markdown/markdown.js" },
+        { src: "plugin/notes/notes.js", async: true },
+        {
+          src: "plugin/highlight/highlight.js",
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        }
+      ]
+    });
+  </script>
+</body>
+
+</html>
