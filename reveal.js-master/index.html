@@ -9,10 +9,16 @@
 
   <link rel="stylesheet" href="css/reveal.css" />
   <!-- need to change the theme -->
-  <link rel="stylesheet" href="css/theme/valleytech.css" />
+  <link rel="stylesheet" href="css/theme/moon.css" />
 
   <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="lib/css/zenburn.css" />
+  <link rel="stylesheet" href="lib/css/tomorrow.css" />
+
+  <!-- Text Animations CSS -->
+  <link rel="stylesheet" href="css/animations/animations.css">
+
+  <!-- Google Animation -->
+  <link rel="stylesheet" href="css/animations/google-animation.css">
 
   <!-- Printing and PDF exports -->
   <script>
@@ -42,7 +48,8 @@
         <p class="fragment highlight-blue">highlight-blue</p>
       </section> -->
       <section>
-        <h1>Intermediate <span class="fragment grow">CSS</span></h1>
+        <h1 class="tracking-in-expand-fwd">INTERMEDIATE CSS</h1>
+        <p class="test">test</p>
       </section>
       <section>
         <h2>Objectives</h2>
@@ -107,10 +114,17 @@
         </aside>
       </section>
       <section>
-        <a href="https://fonts.google.com/">
-          <h1>GOOGLE FONTS</h1>
-        </a>
-        <!-- <hr> -->
+        <div class="container">
+          <div class="G letter">G</div>
+          <div class="o letter">o</div>
+          <div class="o letter">o</div>
+          <div class="g letter">g</div>
+          <div class="l letter">l</div>
+          <div class="e letter">e</div>
+        </div>
+        <h3>
+          <a href="https://fonts.google.com/">Pick your font.</a>
+        </h3>
       </section>
       <section>
         <h1>The Box Model</h1>
@@ -133,14 +147,22 @@
             <li>Margin</li>
           </ul>
         </div>
-        <br>
         <img class="lgImg" src="./images/CSS_Box_Model.png" alt="#">
+      </section>
+      <section>
+        <pre><code class="css">
+            body {
+              color: red;
+            }
+        </code></pre>
       </section>
     </div>
   </div>
 
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
+  <script src="lib/js/animations.js"></script>
+
 
   <script>
     // More info about config & dependencies:
@@ -151,13 +173,14 @@
         { src: "plugin/markdown/marked.js" },
         { src: "plugin/markdown/markdown.js" },
         { src: "plugin/notes/notes.js", async: true },
+        { src: "plugin/anime-master/anime.min.js" },
         {
           src: "plugin/highlight/highlight.js",
           async: true,
           callback: function () {
             hljs.initHighlightingOnLoad();
           }
-        }
+        },
       ]
     });
   </script>
