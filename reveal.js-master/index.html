@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="css/reveal.css" />
   <!-- need to change the theme -->
-  <link rel="stylesheet" href="css/theme/moon.css" />
+  <link rel="stylesheet" href="css/theme/mystic.css" />
 
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/css/tomorrow.css" />
@@ -19,6 +19,9 @@
 
   <!-- Google Animation -->
   <link rel="stylesheet" href="css/animations/google-animation.css">
+
+  <!-- Intro Animation -->
+  <link rel="stylesheet" href="css/animations/title.css">
 
   <!-- Printing and PDF exports -->
   <script>
@@ -47,15 +50,14 @@
         <p class="fragment highlight-green">highlight-green</p>
         <p class="fragment highlight-blue">highlight-blue</p>
       </section> -->
-      <section>
-        <h1 class="tracking-in-expand-fwd">INTERMEDIATE CSS</h1>
-        <p class="test">test</p>
+      <section class="title-wrapper">
+        <h1 class="tracking-in-expand-fwd">INTERMEDIATE <span class="title">CSS</span></h1>
       </section>
       <section>
         <h2>Objectives</h2>
         <!-- <hr> -->
         <ul>
-          <li class="fragment fade-up">Manipulate common FONT and TEXT properties.</li>
+          <li class="fragment fade-up">Manipulate common <strong>FONT</strong> and <strong>TEXT</strong> properties.</li>
           <li class="fragment fade-up">Include external fonts using <a href="https://fonts.google.com/">Google Fonts</a></li>
           <li class="fragment fade-up">Manipulate common font and text properties.</li>
         </ul>
@@ -68,11 +70,12 @@
 
       </section>
       <section>
-        <h2>Texts and Fonts</h2>
+        <h2><span class="shadow">Texts</span> and <span class="shadow2">FONTS</span></h2>
         <!-- <hr> -->
         <ul>
-          <li>Not all fonts are available within your machine's browser.</li>
-          <li>At <a href="https://www.cssfontstack.com/">Css Font Stack</a> we can check what basic fonts we can use.</li>
+          <li class="fragment fade-up">Fonts very depending on what is installed on your machine.</li>
+          <li class="fragment fade-up">At <a href="https://www.cssfontstack.com/">Css Font Stack</a> we can check what
+            basic fonts we can use.</li>
         </ul>
         <aside class="notes">
           Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the
@@ -83,12 +86,12 @@
         <h2>Commonly used Font Properties</h2>
         <!-- <hr> -->
         <ul>
-          <li>font-family</li>
-          <li>font-size</li>
-          <li>font-weight</li>
-          <li>line-height</li>
-          <li>text-align</li>
-          <li>text-decoration</li>
+          <li class="fragment fade-up">font-family</li>
+          <li class="fragment fade-up">font-size</li>
+          <li class="fragment fade-up">font-weight</li>
+          <li class="fragment fade-up">line-height</li>
+          <li class="fragment fade-up">text-align</li>
+          <li class="fragment fade-up">text-decoration</li>
         </ul>
         <aside class="notes">
           Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the
@@ -96,16 +99,30 @@
         </aside>
       </section>
       <section>
-        <h2>Pixels VS Ems</h2>
+        <h1>Font-family</h1>
+        <p>generic:</p>
+        <div class="fig-container" style="overflow:hidden;" data-overflow-shown=true data-file="https://codepen.io/roxanneg93/pen/bQONaX?editors=1100#0"
+          data-style="height: 500px; margin-top: -100px; width: 100%;">
+        </div>
+
+      </section>
+      <section>
+        <h2><span class="shadow">Pixels</span> VS <span class="shadow2">EMS</span></h2>
         <!-- <hr> -->
         <ul>
-          <li>When defining the <span class="emphasize">font-size</span> property, an <em>em</em> is equal to the size
+          <li class="fragment fade-up">When defining the <span class="highlight">font-size</span> property, an <em
+              class="highlight">em</em>
+            is equal to the size
             of the font
-            that applies to the parent of the element in question.</li>
-          <li>Unless specified anywhere else on the page, the browser's font-size default is typically 16px.</li>
-          <li>By default: 1em = 16px, and 2em = 32px</li>
+            that applies to the <span class="underline-text">parent</span> of the element in question.</li>
+          <li class="fragment fade-up">Unless specified anywhere else on the page, the browser's font-size default is
+            typically 16px.</li>
+          <li class="fragment fade-up">By default: <span class="num">1</span><span class="highlight">em</span> = <span
+              class="num">16</span><span class="highlight">px</span>, and
+            <span class="num">2</span><span class="highlight">em</span> = <span class="num">32</span><span class="highlight">px</span></li>
         </ul>
-        <p>Check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">MDN's explanation font-size</a>
+        <p class="fragment fade-up">Check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">MDN's
+            explanation font-size</a>
           if further explanation
           needed.</p>
         <aside class="notes">
@@ -114,28 +131,27 @@
         </aside>
       </section>
       <section>
-        <div class="container">
-          <div class="G letter">G</div>
-          <div class="o letter">o</div>
-          <div class="o letter">o</div>
-          <div class="g letter">g</div>
-          <div class="l letter">l</div>
-          <div class="e letter">e</div>
+        <div id="googleAnimate" class="fragment container">
+          <h1 class="G letter">G</h1>
+          <h1 class="o letter">o</h1>
+          <h1 class="o letter">o</h1>
+          <h1 class="g letter">g</h1>
+          <h1 class="l letter">l</h1>
+          <h1 class="e letter">e</h1>
         </div>
-        <h3>
-          <a href="https://fonts.google.com/">Pick your font.</a>
-        </h3>
+        <h2 class="fragment fade-down"><a href="https://fonts.google.com/">FONTS</a></h2>
       </section>
       <section>
-        <h1>The Box Model</h1>
+        <h1 class="box-border">The Box Model</h1>
         <p>Padding, Margin, Border, and More!</p>
       </section>
       <section>
         <h2>Box Model</h2>
-        <p>"In a document, each element is represented as a rectangular box.
-          In CSS, each of these rectangular boxes is described using the standard box model.
-          Each box has four edges: the margin edge, border edge, padding edge, and content edge."</p>
-        <p> - MDN</p>
+        <p>"The CSS box model is the foundation of layout on the Web — each element is represented as a rectangular
+          box, with the box's content, padding, border, and margin built up around one another like the layers of an
+          onion. As a browser renders a web page layout, it works out what styles are applied to the content of each
+          box, how big the surrounding onion layers are, and where the boxes sit in relation to one another. "</p>
+        <p> <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">- MDN</a></p>
       </section>
       <section>
         <h2>Box Model</h2>
@@ -150,11 +166,33 @@
         <img class="lgImg" src="./images/CSS_Box_Model.png" alt="#">
       </section>
       <section>
-        <pre><code class="css">
+        <pre><code  class="data-noescape">
             body {
-              color: red;
+              color: #fff;
+              width: 500px;
             }
         </code></pre>
+        <pre><code  class="data-noescape">
+          // this is a comment     
+            if(a){
+              return this;
+            } else {
+              console.log("hello");
+            }
+        </code></pre>
+        <pre><code  class="html">
+          <h1>Hello world!</h1>
+          </code></pre>
+      </section>
+      <section class="fig-container" data-file="https://students.brown.edu/seeing-theory/">
+      </section>
+      <section>
+        <pre><code  class="data-noescape">
+              body {
+                color: #fff;
+                width: 500px;
+              }
+          </code></pre>
       </section>
     </div>
   </div>
@@ -173,6 +211,7 @@
         { src: "plugin/markdown/marked.js" },
         { src: "plugin/markdown/markdown.js" },
         { src: "plugin/notes/notes.js", async: true },
+        { src: 'node_modules/reveald3/reveald3.js' },
         { src: "plugin/anime-master/anime.min.js" },
         {
           src: "plugin/highlight/highlight.js",
@@ -183,6 +222,37 @@
         },
       ]
     });
+
+    // code to control animations
+    // const _transitions = [
+    //   {
+    //     transitionForward: () => {
+    //       test = document.getElementById('test').className = "bigger";
+    //       console.log("event fired")
+    //     },
+    //     index: 1
+    //   }
+    // ]
+
+    // var _transitions = [
+    //   {
+    //     transitionForward: () => recolorize("yellow"),
+    //     index: 0 // will be run at the data-fragment-index=0 state
+    //   },
+    //   {
+    //     transitionForward: () => recolorize("red"),
+    //     transitionBackward: () => recolorize("blue"), // different behavior on the way back
+    //     index: 3 // will be run at the data-fragment-index=3 state
+    //   },
+    //   {
+    //     transitionForward: () => resize(0.1, 6),
+    //   }, // no index, so will be played at the next data-fragment-index state (4)
+    // ]
+
+    // Reveal.addEventListener('fragmentshown', function (event) {
+    //   console.log("event fired!")
+    // });
+
   </script>
 </body>
 
