@@ -123,7 +123,7 @@
         </aside>
       </section>
       <section>
-        <div id="googleAnimate" class="fragment container">
+        <div id="googleAnimate" class="fragment hide">
           <h1 class="G letter">G</h1>
           <h1 class="o letter">o</h1>
           <h1 class="o letter">o</h1>
@@ -190,34 +190,22 @@
     });
 
     // code to control animations
-    // const _transitions = [
-    //   {
-    //     transitionForward: () => {
-    //       test = document.getElementById('test').className = "bigger";
-    //       console.log("event fired")
-    //     },
-    //     index: 1
-    //   }
-    // ]
 
-    // var _transitions = [
-    //   {
-    //     transitionForward: () => recolorize("yellow"),
-    //     index: 0 // will be run at the data-fragment-index=0 state
-    //   },
-    //   {
-    //     transitionForward: () => recolorize("red"),
-    //     transitionBackward: () => recolorize("blue"), // different behavior on the way back
-    //     index: 3 // will be run at the data-fragment-index=3 state
-    //   },
-    //   {
-    //     transitionForward: () => resize(0.1, 6),
-    //   }, // no index, so will be played at the next data-fragment-index state (4)
-    // ]
+    Reveal.addEventListener('fragmentshown', () => {
+      if (event.fragment.id === 'googleAnimate') {
+        console.log("Animation Triggered!");
 
-    // Reveal.addEventListener('fragmentshown', function (event) {
-    //   console.log("event fired!")
-    // });
+        const letters = document.querySelectorAll(".letter");
+        const container = document.querySelector('.hide');
+        // var count = 0;
+        container.classList.toggle("show");
+        letters.forEach(x => {
+          x.classList.toggle("animate")
+          // count++;
+          // console.log(count);
+        })
+      }
+    })
 
   </script>
 </body>
